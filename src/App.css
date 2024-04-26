@@ -1,0 +1,44 @@
+/*.container {
+    position: relative;
+}
+*/
+.rect {
+  border-radius: 20px;
+  height: 525px;
+  width: 650px;
+  background-color: lightslategray;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+
+}
+
+.main-btn {
+  background-color: gray;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  padding: 14px 40px;
+  border-radius: 12px;
+  margin-top: 5px; /*for spacing between buttons*/
+  margin-bottom: 5px;
+}
+
+.select {
+  background-color: white; 
+  color: black; 
+  border: 2px solid darkgray;
+}
+
+.select:hover {
+  background-color: darkgray;
+  color: white;
+  transition-duration: 0.5s;
+}
