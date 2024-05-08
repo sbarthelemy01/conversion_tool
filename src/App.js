@@ -1,33 +1,70 @@
 //import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 
-function App() {
+import Home from './components/Home';
+import Currency from './components/currency/Currency';
+import Distance from './components/dist/Dist';
+import Length from './components/length/Length';
+import Size from './components/size/Size';
+import Speed from './components/speed/Speed';
+import Temperature from './components/temp/Temp';
+import Weight from './components/weight/Weight';
+
+
+//routing all the paths/pages here
+//source help: https://www.geeksforgeeks.org/how-to-redirect-to-another-page-in-reactjs/
+
+ function App() {
   return (
-    <div className='rect'>
-        <h1>Conversion Tool</h1>
+    <>
+        <Router>
+            <Routes>
 
-        <div className='options'>
-          <button onclick="currency()" id="curr" className="main-btn select">Currency</button>
-          <br/> 
-          <button className="main-btn select">Distance</button>
-          <br/>
-          <button className="main-btn select">Length</button>
-          <br/>
-          <button className="main-btn select">Size</button>
-          <br/>
-          <button className="main-btn select">Speed</button>
-          <br/>
-          <button className="main-btn select">Temperature</button>
-          <br/>
-          <button className="main-btn select">Weight</button>
-          <br/>
+              <Route 
+                  path="/" 
+                  element={<Home />} 
+              />
 
-        </div>
-    </div>
+              <Route
+                  path="/currency"
+                  element={<Currency />}
+              />
 
+              <Route
+                  path="/distance"
+                  element={<Distance />}
+              />
 
+              <Route
+                  path="/length"
+                  element={<Length />}
+              />
 
+              <Route
+                  path="/size"
+                  element={<Size />}
+              />
+
+              <Route
+                  path="/speed"
+                  element={<Speed />}
+              />
+
+              <Route
+                  path="/temperature"
+                  element={<Temperature />}
+              />
+
+              <Route
+                  path="/weight"
+                  element={<Weight />}
+              />
+
+            </Routes>
+        </Router>
+    </>
   );
 }
-
+ 
 export default App;
