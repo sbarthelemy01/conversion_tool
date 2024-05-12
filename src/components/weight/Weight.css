@@ -12,3 +12,15 @@
     text-align: center;
   
 }
+
+/*removes arrows from number input fields
+source help:https://www.geeksforgeeks.org/how-to-disable-arrows-from-number-input/ */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
