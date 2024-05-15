@@ -22,7 +22,7 @@ const Weight = () => {
 	const handleCalc = () => { //will show the conversion on button click (in the second box)
 		//console.log(input + unit1 + "=  " + unit2);
 		
-		if (input !== null) {
+		if (input !== '') {
 			if (unit1 !== unit2) { //make sure that units are not the same
 				//put calculated value into output box
 				//source help: https://forum.freecodecamp.org/t/place-a-calculated-value-from-javascript-into-an-input-field/435749/2
@@ -32,7 +32,6 @@ const Weight = () => {
 
 						output =  input * 0.4536; // mass(kg) = mass(lb) * 0.4536 <- https://www.calculatorsoup.com/ conversion
 						output = output.toFixed(2); //round to two decimal places; source help: https://coreui.io/blog/how-to-round-a-number-to-two-decimal-places-in-javascript/
-						//return input2;
 
 						if (output !== 0.00) {
 
@@ -48,7 +47,6 @@ const Weight = () => {
 					if (unit2 === "lbs") {
 						output =  input * 2.205; // mass(lb) = mass(kg) * 2.205
 						output = output.toFixed(2);
-						//return input2;
 
 						if (output !== 0.00) {
 
