@@ -4,8 +4,8 @@
 */
 .rect {
   border-radius: 20px;
-  height: 525px;
-  width: 650px;
+  height: 480px; /*525px*/
+  width: 600px; /*650px*/
   background-color: lightslategray;
 
   position: absolute;

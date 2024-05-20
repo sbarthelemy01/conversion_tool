@@ -18,8 +18,6 @@ function Home() {
         <div className='options'>
           <button onClick={() => navigate("/currency")} className="main-btn select">Currency</button>
           <br/> 
-          <button onClick={() => navigate("/distance")} className="main-btn select">Distance</button>
-          <br/>
           <button onClick={() => navigate("/length")} className="main-btn select">Length</button>
           <br/>
           <button onClick={() => navigate("/size")} className="main-btn select">Size</button>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import IconButton from '@mui/material/IconButton';
-import SwapHorizIcon from '@mui/icons-material/SwapHoriz';import "./Speed.css"
+import SwapHorizIcon from '@mui/icons-material/SwapHoriz';
+import "./Speed.css"
 
 const Speed = () => {
 
@@ -76,7 +77,7 @@ const Speed = () => {
 				value={unit1}
 				onChange={e => setUnit1(e.target.value)}
 		  	>
-				<option value="none selected"> </option>
+				<option value=""></option>
 				<option value="km/h">km/h</option>
 				<option value="mph">mph</option>
 
@@ -94,7 +95,7 @@ const Speed = () => {
 				value={unit2}
 				onChange={e => setUnit2(e.target.value)}
 			>
-				<option value="none selected"> </option>
+				<option value=""></option>
 				<option value="km/h">km/h</option>
 				<option value="mph">mph</option>
 

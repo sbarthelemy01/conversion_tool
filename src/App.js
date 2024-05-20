@@ -4,7 +4,6 @@ import './App.css';
 
 import Home from './components/Home';
 import Currency from './components/currency/Currency';
-import Distance from './components/dist/Dist';
 import Length from './components/length/Length';
 import Size from './components/size/Size';
 import Speed from './components/speed/Speed';
@@ -29,11 +28,6 @@ import Weight from './components/weight/Weight';
               <Route
                   path="/currency"
                   element={<Currency />}
-              />
-
-              <Route
-                  path="/distance"
-                  element={<Distance />}
               />
 
               <Route

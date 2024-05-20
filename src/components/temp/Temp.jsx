@@ -67,8 +67,6 @@ const Temp = () => {
 	};
 
 
-
-
 	return (
 		<div className="rect">
 			<h1>Temperature</h1>
@@ -79,7 +77,7 @@ const Temp = () => {
 				value={unit1}
 				onChange={e => setUnit1(e.target.value)}
 		  	>
-				<option value="none selected"> </option>
+				<option value=""></option>
 				<option value="°C">°C</option>
 				<option value="°F">°F</option>
 
@@ -97,7 +95,7 @@ const Temp = () => {
 				value={unit2}
 				onChange={e => setUnit2(e.target.value)}
 			>
-				<option value="none selected"> </option>
+				<option value=""></option>
 				<option value="°C">°C</option>
 				<option value="°F">°F</option>
 
