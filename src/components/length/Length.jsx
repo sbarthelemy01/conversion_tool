@@ -10,6 +10,7 @@ const Length = () => {
 
 	const [input, setInput] = useState(''); 
 	let [output, setOutput] = useState('');
+	let [output2, setOutput2] = useState(''); // for ft + in conversion
 
 
 	const handleCalc = () => { 
@@ -23,16 +24,22 @@ const Length = () => {
 						output =  input / 2.54; // length(inch) = length(cm) / 2.54 <- https://www.rapidtables.com/ conversion
 						output = Math.round(output); //round as a whole number
 
+						let whole = Math.floor(output / 12); //in to ft + in conversion
+						let remainder = output % 12;
+						output2 = whole + "ft " + remainder + "in";
+						
 						if (output !== 0) {
 
 							setOutput(output);
+							setOutput2(output2);
+							//console.log(whole + "ft " + remainder + "in");
 						}
 						
 					}
 					//console.log("Error"); //else put out an error or don't do anything
 				}
 
-				if (unit1 === "in") { //convert from in cm
+				if (unit1 === "in") { //convert from in to cm
 					if (unit2 === "cm") {
 						output =  input * 2.54; // length(inch) = length(cm) x 2.54
 						output = Math.round(output);
@@ -66,6 +73,8 @@ const Length = () => {
 		
 	};
 
+	//TODO: clear the output box when input value is set to '' or when user clicks inside input box
+	//TODO: add conversion with ft + in
 
 	return (
 		<div className="rect">
@@ -101,7 +110,7 @@ const Length = () => {
 
 			</select>
 
-
+			<p id="output2">{output2}</p>
 
 		</div>
 	);
