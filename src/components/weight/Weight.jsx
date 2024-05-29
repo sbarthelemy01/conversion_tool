@@ -72,10 +72,15 @@ const Weight = () => {
 		*/
 		
 		
-		//TODO: do error checking - issue an alert to user that units should not be same or just don't do anything
-		//TODO: reset output box when user clicks on input box or unit1 box
-		
+		//TODO: do error checking - issue an alert to user that units should not be same or just don't do anything		
 	};
+
+	const ClearFields = () => {	
+		let input = document.getElementById("box1"); //clear input field when onfocus event is called
+		input.value = '';
+
+		setOutput(''); //clear output
+	}
 
 	return (
 		<div className="rect">
@@ -83,7 +88,7 @@ const Weight = () => {
 
 			{/* updating value inside input field
 			source help: https://medium.com/geekculture/using-react-hooks-to-get-input-value-9e0aa19b6b37*/}
-			<input id="box1" type="number" min="0" onChange={e => setInput(e.target.value)}/>
+			<input id="box1" type="number" onFocus={ClearFields} min="0" onChange={e => setInput(e.target.value)}/>
 
 			<select id="dropdown1" 
 				value={unit1}

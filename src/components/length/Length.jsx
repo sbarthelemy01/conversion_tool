@@ -32,15 +32,18 @@ const Length = () => {
 
 							setOutput(output);
 
-							if (whole === 0) {
+							if (whole === 0) { //removing any zeroes from the 2nd conversion
 								setOutput2(remainder + "in");
+							}
+
+							if (remainder === 0) {
+								setOutput2(whole + "ft ");
 							}
 
 							else {
 								setOutput2(output2);
 							}
 							
-							//console.log(whole + "ft " + remainder + "in");
 						}
 						
 					}
@@ -77,8 +80,7 @@ const Length = () => {
 		
 		
 		//TODO: do error checking - issue an alert to user that units should not be same or just don't do anything
-		//ClearFields();
-	}
+	};
 
 	//clearing input and output fields on button click
 	// using onfocus event; source help: https://www.w3schools.com/jsref/event_onfocus.asp 
@@ -101,7 +103,7 @@ const Length = () => {
 		<div className="rect">
 			<h1>Length</h1>
 
-			<input id="box1" onFocus={ClearFields} type="number" min="0"  onChange={e => setInput(e.target.value)}/>
+			<input id="box1" type="number" onFocus={ClearFields} min="0"  onChange={e => setInput(e.target.value)}/>
 
 			<select id="dropdown1" 
 				value={unit1}
@@ -138,5 +140,3 @@ const Length = () => {
 };
 
 export default Length;
-
-//			<input id="box2" value={output} onChange={e => setOutput(e.target.value)} type="number" />
