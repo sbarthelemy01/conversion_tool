@@ -31,7 +31,15 @@ const Length = () => {
 						if (output !== 0) {
 
 							setOutput(output);
-							setOutput2(output2);
+
+							if (whole === 0) {
+								setOutput2(remainder + "in");
+							}
+
+							else {
+								setOutput2(output2);
+							}
+							
 							//console.log(whole + "ft " + remainder + "in");
 						}
 						
@@ -69,18 +77,31 @@ const Length = () => {
 		
 		
 		//TODO: do error checking - issue an alert to user that units should not be same or just don't do anything
-		//TODO: reset output box when user clicks on input box or unit1 box
-		
-	};
+		//ClearFields();
+	}
 
-	//TODO: clear the output box when input value is set to '' or when user clicks inside input box
-	//TODO: add conversion with ft + in
+	//clearing input and output fields on button click
+	// using onfocus event; source help: https://www.w3schools.com/jsref/event_onfocus.asp 
+	//source help: https://www.geeksforgeeks.org/html-clearing-the-input-field/
+	const ClearFields = () => {	
+		let input = document.getElementById("box1"); //clear input field when onfocus
+		input.value = '';
+
+		//clearing output
+		//let output_ = document.getElementById("box2");
+		//output_.value = '';
+		//document.getElementById("output2").innerHTML = ""; //clearing the ft + in conversion space
+
+		setOutput(''); //clear first and second output (w/ the ft + in conversion)
+		setOutput2('');
+
+	}
 
 	return (
 		<div className="rect">
 			<h1>Length</h1>
 
-			<input id="box1" type="number" min="0" onChange={e => setInput(e.target.value)}/>
+			<input id="box1" onFocus={ClearFields} type="number" min="0"  onChange={e => setInput(e.target.value)}/>
 
 			<select id="dropdown1" 
 				value={unit1}
@@ -117,3 +138,5 @@ const Length = () => {
 };
 
 export default Length;
+
+//			<input id="box2" value={output} onChange={e => setOutput(e.target.value)} type="number" />
