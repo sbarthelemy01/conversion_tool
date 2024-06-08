@@ -1,7 +1,7 @@
 .rect {
     border-radius: 20px;
     height: 480px;
-    width: 600px;
+    width: 700px;
     background-color: lightslategray;
   
     position: absolute;
@@ -11,4 +11,12 @@
   
     text-align: center;
   
+}
+
+.dropdown1 {
+    width: 300px;
+}
+
+.dropdown2 {
+    width: 300px;
 }
