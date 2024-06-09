@@ -87,20 +87,6 @@ const Currency = () => {
 		setOutput(''); //clear output
 	}
 
-	/*
-	<select id="dropdown1" 
-				value={unit1}
-				onChange={e => setUnit1(e.target.value)}
-		  	>
-				<option value=""></option>
-				<option value="km/h">km/h</option>
-				<option value="mph">mph</option>
-
-	</select>
-
-	*/
-
-
 	return (
 		<div className="rect">
 			<h1>Currency</h1>
@@ -109,10 +95,9 @@ const Currency = () => {
 
 			<Select
 				className="dropdown1"
-				placeholder="Country"
+				placeholder="Country/Territory"
 				options={Countries}
 				onChange={opt => setCountry1(opt.label, opt.value)}
-				//onChange={opt => console.log(opt.label, opt.value)}
 				noOptionsMessage={({ inputValue }) => `No result found for "${inputValue}"`}
 			/>
 
@@ -126,7 +111,7 @@ const Currency = () => {
 
 			<Select
 				className="dropdown2"
-				placeholder="Country"
+				placeholder="Country/Territory"
 				options={Countries}
 				onChange={opt => setCountry2(opt.label, opt.value)}
 				noOptionsMessage={({ inputValue }) => `No result found for "${inputValue}"`}
