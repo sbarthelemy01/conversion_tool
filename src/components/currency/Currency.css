@@ -15,18 +15,18 @@
 
 #box1 {
     position: absolute;
-    top: 110px;
-    left: 70px;
-    height: 30px;
-    width: 120px;
+    top: 95px;
+    left: 40px;
+    height: 45px;
+    width: 180px;
 }
 
 #box2 {
     position: absolute;
-    top: 110px;
-    right: 70px;
-    height: 30px;
-    width: 120px;
+    top: 95px;
+    right: 45px;
+    height: 45px;
+    width: 180px;
 }
 
 .dropdown1 {
@@ -42,3 +42,41 @@
     top: -15px;
     left: 340px;
 }
+
+/*
+text alignment help: https://www.freecodecamp.org/news/text-align-in-css-how-to-align-text-in-center-with-html/ 
+*/
+#currency1, #currency2 {
+    position: absolute;
+    border-radius: 25px;
+    background: lightblue;
+    padding: 20px; 
+    width: 20px;
+    height: 3px; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#currency1 {
+    top: 83px;
+    left: 165px;
+}
+
+#currency2 {
+    top: 83px;
+    right: 48px;
+}
+
+#flags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#img {
+    width: 25px;
+}
+/* use relative, absolute, or fixed for element positioning*/
