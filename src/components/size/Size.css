@@ -2,7 +2,7 @@
     border-radius: 20px;
     height: 480px;
     width: 600px;
-    background-color: lightslategray;
+    background-color: #778899;
   
     position: absolute;
     top: 50%;
@@ -11,4 +11,31 @@
   
     text-align: center;
   
+}
+
+#buttons {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: lightslategray;
+    border-radius: 15px;
+    width: 125px;
+    padding: 10px;
+    left: 210px;
+}
+
+#panels {
+    border-color: lightslategray;
+    border: 0;
+    -webkit-backface-visibility: hidden;
+
+}
+
+#categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
